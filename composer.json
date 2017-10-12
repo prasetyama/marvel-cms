@@ -1,0 +1,87 @@
+{
+    "name": "IKAB/marvel.propertiella",
+    "license": "proprietary",
+    "type": "project",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "": "src/"
+        },
+        "classmap": [
+            "app/AppKernel.php",
+            "app/AppCache.php"
+        ]
+    },
+    "require": {
+        "php": ">=5.5.0",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "symfony/symfony": "2.8.*",
+        "doctrine/orm": "^2.4.8",
+        "doctrine/doctrine-bundle": "~1.4",
+        "doctrine/mongodb-odm": "~1.0",
+        "doctrine/mongodb-odm-bundle": "~3.0",
+        "symfony/swiftmailer-bundle": "~2.3",
+        "symfony/monolog-bundle": "~2.4",
+        "sensio/distribution-bundle": "~5.0",
+        "sensio/framework-extra-bundle": "^3.0.2",
+        "incenteev/composer-parameter-handler": "~2.0",
+        "deployer/deployer": "~3.0",
+        "guzzlehttp/guzzle": "~6.0",
+        "friendsofsymfony/user-bundle": "~2.0@dev",
+        "nelmio/api-doc-bundle": "^2.10",
+        "phpoffice/phpexcel" : "~1.8", 
+        "liuggio/excelbundle": "~2.0",
+        "nelmio/cors-bundle": "^1.4",
+        "captcha-com/symfony-captcha-bundle": "3.*",
+        "beberlei/DoctrineExtensions": "^1.0",
+        "snc/redis-bundle": "1.1.x-dev",
+        "predis/predis": "^1.0",
+        "raulr/google-play-scraper": "^0.1.0",
+        "widop/google-analytics-bundle": "*",
+        "codeception/codeception": "*",
+        "flow/jsonpath": "~0.3",
+        "leafo/scssphp": "^0.3.0",
+        "patchwork/jsqueeze": "~1.0",
+        "imagine/imagine": "~0.5.0",
+        "symfony/assetic-bundle": "^2.7",
+        "salavert/time-ago-in-words": "dev-master",
+        "twig/extensions": "1.0",
+        "suncat/mobile-detect-bundle": "0.10.*",
+        "chrisboulton/php-resque": "1.2.x"
+    },
+    "require-dev": {
+        "sensio/generator-bundle": "~3.0",
+        "symfony/phpunit-bridge": "~2.7"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::prepareDeploymentTarget"
+        ],
+        "post-update-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::prepareDeploymentTarget"
+        ]
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "extra": {
+        "symfony-app-dir": "app",
+        "symfony-web-dir": "web",
+        "symfony-assets-install": "relative",
+        "incenteev-parameters": {
+            "file": "app/config/parameters.yml"
+        }
+    }
+}

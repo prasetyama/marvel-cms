@@ -1,0 +1,7 @@
+marvel_id_welcome:
+    path:     /
+    defaults: { _controller: MarvelLoginBundle:Default:index}
+    
+marvel_id_login:
+    path:     /login/
+    defaults: { _controller: MarvelLoginBundle:Default:index}
