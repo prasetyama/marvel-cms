@@ -1,15 +1,9 @@
 <?php
-
 error_reporting(E_ALL); ini_set('display_errors', 1);
-use Symfony\Component\Debug\Debug;
 use Symfony\Component\HttpFoundation\Request;
-
-umask(0000);
 
 require __DIR__.'/../app/autoload.php';
 include_once __DIR__.'/../app/bootstrap.php.cache';
-
-//Debug::enable();
 
 $kernel = new AppKernel('prod', false);
 $kernel->loadClassCache();
