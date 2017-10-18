@@ -1,17 +1,12 @@
 {
-    "name": "IKAB/marvel.propertiella",
+    "name": "IKAB/marvel.hunilo",
     "license": "proprietary",
     "type": "project",
     "minimum-stability": "dev",
     "prefer-stable": true,
     "autoload": {
         "psr-4": {
-            "": "src/"
-        },
-        "classmap": [
-            "app/AppKernel.php",
-            "app/AppCache.php"
-        ]
+            "": "src/", "SymfonyStandard": "app/"}
     },
     "require": {
         "php": ">=5.5.0",
@@ -79,9 +74,11 @@
     "extra": {
         "symfony-app-dir": "app",
         "symfony-web-dir": "web",
-        "symfony-assets-install": "relative",
         "incenteev-parameters": {
             "file": "app/config/parameters.yml"
+        },
+        "branch-alias": {
+            "dev-master": "2.5-dev"
         }
     }
 }
