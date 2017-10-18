@@ -1,5 +1,7 @@
 <?php
 
+error_reporting(E_ALL); ini_set('display_errors', 1);
+
 use Symfony\Component\HttpFoundation\Request;
 
 require __DIR__.'/../app/autoload.php';
