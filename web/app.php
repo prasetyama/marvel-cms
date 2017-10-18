@@ -2,8 +2,12 @@
 
 use Symfony\Component\HttpFoundation\Request;
 
-require __DIR__.'/../app/autoload.php';
-include_once __DIR__.'/../app/bootstrap.php.cache';
+//require __DIR__.'/../app/autoload.php'; ORI
+//include_once __DIR__.'/../app/bootstrap.php.cache'; ORI
+
+$loader = require_once __DIR__.'/../app/bootstrap.php.cache'; //New
+
+require_once __DIR__.'/../app/AppKernel.php'; //New
 
 $kernel = new AppKernel('prod', false);
 $kernel->loadClassCache();
