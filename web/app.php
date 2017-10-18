@@ -9,9 +9,9 @@ umask(0000);
 require __DIR__.'/../app/autoload.php';
 include_once __DIR__.'/../app/bootstrap.php.cache';
 
-Debug::enable();
+//Debug::enable();
 
-$kernel = new AppKernel('dev', false);
+$kernel = new AppKernel('prod', false);
 $kernel->loadClassCache();
 //$kernel = new AppCache($kernel);
 
