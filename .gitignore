@@ -4,7 +4,6 @@
 /app/cache/*
 /app/logs/*
 /app/config/config_dev.yml
-/app/config/config_prod.yml
 /app/config/parameters.yml
 !app/cache/.gitkeep
 !app/logs/.gitkeep
