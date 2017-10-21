@@ -1,11 +1,11 @@
 #! /bin/bash
 
-php app/console assets:install
-php app/console assetic:dump
+app/console assets:install
+app/console assetic:dump
 chmod -R 777 app/cache
-php app/console cache:clear
+app/console cache:clear
 chmod -R 777 app/cache
-php app/console cache:clear --env=prod
+app/console cache:clear --env=prod
 chmod -R 777 app/cache
 chmod -R 777 app/logs
 top
