@@ -13,22 +13,15 @@ imports:
 #        result_cache_driver: apc
 #        query_cache_driver: apc
 
-parameters:
-    facebook_app_id: 1627561894197933
-
 monolog:
     handlers:
         main:
-            type:         fingers_crossed
+            type: fingers_crossed
             action_level: error
-            handler:      nested
+            handler: nested
         nested:
-            type:  stream
-            path:  "%kernel.logs_dir%/%kernel.environment%.log"
+            type: stream
+            path: '%kernel.logs_dir%/%kernel.environment%.log'
             level: debug
         console:
-            type:  console
-
-twig:
-    globals:
-        facebook_app_id: %facebook_app_id%
+            type: console

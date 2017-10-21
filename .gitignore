@@ -3,8 +3,6 @@
 /app/bootstrap.php.cache
 /app/cache/*
 /app/logs/*
-/app/config/config_dev.yml
-/app/config/parameters.yml
 !app/cache/.gitkeep
 !app/logs/.gitkeep
 /app/phpunit.xml
@@ -12,6 +10,7 @@
 /vendor/
 /bin/
 /composer.phar
+/composer.lock
 /deployment-config.json
 /.ftpconfig
 /nbproject/
