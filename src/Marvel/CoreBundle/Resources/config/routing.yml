@@ -3,7 +3,7 @@ marvel_id_dashboard:
     defaults: { _controller: MarvelCoreBundle:Default:dashboard}
 marvel_id_developer_add:
     path:     /developer/add/
-    defaults: { _controller: MarvelCoreBundle:Default:dashboard}
+    defaults: { _controller: MarvelDeveloperBundle:Default:add}
 marvel_id_developer_list:
     path:     /developer/list/
     defaults: { _controller: MarvelCoreBundle:Default:dashboard}

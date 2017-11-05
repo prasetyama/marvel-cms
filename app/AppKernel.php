@@ -23,6 +23,7 @@ class AppKernel extends Kernel
             new Marvel\LoginBundle\MarvelLoginBundle(),
             new Marvel\AssetsBundle\MarvelAssetsBundle(),
             new Marvel\CoreBundle\MarvelCoreBundle(),
+            new Marvel\DeveloperBundle\MarvelDeveloperBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {
