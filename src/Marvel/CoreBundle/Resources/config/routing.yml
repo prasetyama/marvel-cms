@@ -1,0 +1,16 @@
+marvel_id_dashboard:
+    path:     /dashboard/
+    defaults: { _controller: MarvelCoreBundle:Default:dashboard}
+marvel_id_developer_add:
+    path:     /developer/add/
+    defaults: { _controller: MarvelCoreBundle:Default:dashboard}
+marvel_id_developer_list:
+    path:     /developer/list/
+    defaults: { _controller: MarvelCoreBundle:Default:dashboard}
+marvel_id_secondary_add:
+    path:     /secondary/add/
+    defaults: { _controller: MarvelCoreBundle:Default:dashboard}
+marvel_id_secondary_list:
+    path:     /secondary/list/
+    defaults: { _controller: MarvelCoreBundle:Default:dashboard}
+  
