@@ -5,6 +5,7 @@ use Symfony\Component\HttpFoundation\Request;
 require __DIR__.'/../app/autoload.php';
 include_once __DIR__.'/../app/bootstrap.php.cache';
 
+//umask(0000);
 Debug::enable();
 $kernel = new AppKernel('prod', false);
 $kernel->loadClassCache();
