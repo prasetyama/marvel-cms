@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Marvel Hunilo</title><meta charset="UTF-8" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  {% stylesheets filter="scssphp" filter='cssrewrite' 
+      '@MarvelAssetsBundle/Resources/public/css/bootstrap.min.css' 
+      '@MarvelAssetsBundle/Resources/public/css/bootstrap-responsive.min.css'
+      '@MarvelAssetsBundle/Resources/public/css/matrix-style.css'
+      '@MarvelAssetsBundle/Resources/public/css/matrix-media.css'
+      '@MarvelAssetsBundle/Resources/public/font-awesome/css/font-awesome.css'
+      '@MarvelAssetsBundle/Resources/public/css/jquery.gritter.css'
+  %}
+  <link rel="stylesheet" href="{{ asset_url }}" /> 
+  {% endstylesheets %} {% block stylesheet %}{% endblock %}
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+
+  <!--Header-part-->
+  <div id="header">
+    <h1><a href="#">Marvel Hunilo</a></h1>
+  </div>
+  <!--close-Header-part--> 
+
+
+  <!--top-Header-menu-->
+  <div id="user-nav" class="navbar navbar-inverse">
+    <ul class="nav">
+      <li  class="dropdown" id="profile-messages" ><a title="" href="#" data-toggle="dropdown" data-target="#profile-messages" class="dropdown-toggle"><i class="icon icon-user"></i>  <span class="text">Welcome User</span><b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="#"><i class="icon-user"></i> My Profile</a></li>
+          <li class="divider"></li>
+          <li><a href="login.html"><i class="icon-key"></i> Log Out</a></li>
+        </ul>
+      </li>
+      <li class=""><a title="" href="login.html"><i class="icon icon-share-alt"></i> <span class="text">Logout</span></a></li>
+    </ul>
+  </div>
+  <!--close-top-Header-menu-->
+  
+  <!--sidebar-menu-->
+  <div id="sidebar"><a href="{{ path('marvel_id_dashboard') }}" class="visible-phone"><i class="icon icon-home"></i> Dashboard</a>
+    <ul>
+      <li class="active"><a href="{{ path('marvel_id_dashboard') }}"><i class="icon icon-home"></i> <span>Dashboard</span></a> </li>
+      <li class="submenu"> <a href="#"><i class="icon icon-th-list"></i> <span>Proyek Developer</span> <span class="label label-important">2</span></a>
+        <ul>
+          <li><a href="{{ path('marvel_id_developer_add') }}">Add New</a></li>
+          <li><a href="{{ path('marvel_id_developer_list') }}">List Data</a></li>
+        </ul>
+      </li>
+      <li class="submenu"> <a href="#"><i class="icon icon-th-list"></i> <span>Listing Secondary</span> <span class="label label-important">2</span></a>
+        <ul>
+          <li><a href="{{ path('marvel_id_secondary_add') }}">Add New</a></li>
+          <li><a href="{{ path('marvel_id_secondary_list') }}">List Data</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <!--sidebar-menu-->
+
+  <!--main-container-part-->
+  <div id="content">{% block content %}{% endblock %}</div>
+  <!--end-main-container-part-->
+
+  <!--Footer-part-->
+  <div class="row-fluid">
+    <div id="footer" class="span12"> 2017 &copy; Marvel Hunilo.com. PT. Intradia Kreasi Anak Bangsa</div>
+  </div>
+  <!--end-Footer-part-->
+
+  {% javascripts filter="?jsqueeze"
+    '@MarvelAssetsBundle/Resources/public/js/excanvas.min.js' 
+    '@MarvelAssetsBundle/Resources/public/js/jquery.min.js' 
+    '@MarvelAssetsBundle/Resources/public/js/jquery.ui.custom.js' 
+    '@MarvelAssetsBundle/Resources/public/js/bootstrap.min.js' 
+    '@MarvelAssetsBundle/Resources/public/js/jquery.flot.min.js' 
+    '@MarvelAssetsBundle/Resources/public/js/jquery.flot.resize.min.js' 
+    '@MarvelAssetsBundle/Resources/public/js/jquery.peity.min.js' 
+    '@MarvelAssetsBundle/Resources/public/js/matrix.js' 
+    '@MarvelAssetsBundle/Resources/public/js/matrix.dashboard.js' 
+    '@MarvelAssetsBundle/Resources/public/js/jquery.gritter.min.js' 
+    '@MarvelAssetsBundle/Resources/public/js/matrix.interface.js' 
+    '@MarvelAssetsBundle/Resources/public/js/jquery.validate.js' 
+    '@MarvelAssetsBundle/Resources/public/js/matrix.form_validation.js' 
+    '@MarvelAssetsBundle/Resources/public/js/jquery.wizard.js' 
+    '@MarvelAssetsBundle/Resources/public/js/jquery.uniform.js' 
+    '@MarvelAssetsBundle/Resources/public/js/select2.min.js' 
+    '@MarvelAssetsBundle/Resources/public/js/matrix.popover.js' 
+    '@MarvelAssetsBundle/Resources/public/js/jquery.dataTables.min.js' 
+    '@MarvelAssetsBundle/Resources/public/js/matrix.tables.js'
+    '@MarvelAssetsBundle/Resources/public/js/global.js' %}
+  <script src="{{ asset_url }}"></script>
+  {% endjavascripts %} {% block javascript %}{% endblock %} 
+
+</body>
+</html>
