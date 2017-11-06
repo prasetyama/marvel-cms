@@ -1,0 +1,336 @@
+{% extends 'MarvelAssetsBundle:Default:base.html.twig' %}
+
+{% block content %}
+<div id="content-header">
+	<div id="breadcrumb"> 
+		<a href="index.html" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Beranda</a> 
+		<a href="#" class="tip-bottom">Proyek Developer</a> 
+		<a href="#" class="current">Tambah Data</a> 
+	</div>
+	<h1>Tambah Data Proyek Developer</h1>
+</div>
+
+<div class="container-fluid">
+	<hr>
+	<div class="row-fluid">
+	<form action="#" method="get">
+		<div class="span6">
+	    	<div class="widget-box">
+	        	<div class="widget-title"> <span class="icon"> <i class="icon-align-justify"></i> </span>
+	          		<h5>Info Proyek</h5>
+	        	</div>
+	        	<div class="widget-content nopadding">
+		          	<span class="form-horizontal">
+		            	<div class="control-group">
+		              		<label class="control-label">Nama Proyek :</label>
+		              		<div class="controls">
+		                		<input type="text" class="span11" placeholder="Hunilo Gading Residence" />
+		              		</div>
+		            	</div>
+		            	<div class="control-group">
+		              		<label class="control-label">Tipe Proyek :</label>
+		              		<div class="controls">
+		                		<select >
+				                  <option>Rumah</option>
+				                  <option>Apartemen</option>
+				                </select>
+		              		</div>
+		            	</div>
+		            	<div class="control-group">
+		              		<label class="control-label">Nama Developer :</label>
+		              		<div class="controls">
+		                		<input type="text" class="span11" placeholder="PT. Hunilo Group Properti" />
+		              		</div>
+		            	</div>
+		            	<div class="control-group">
+		              		<label class="control-label">Harga :</label>
+		              		<div class="controls controls-row">
+					            <input type="text" placeholder="235.000.000" class="span5 m-wrap">
+					            <input type="text" placeholder="400.000.000" class="span5 m-wrap">
+					        </div>
+		            	</div>
+		            	<div class="control-group">
+		              		<label class="control-label">Judul Tagline :</label>
+		              		<div class="controls">
+		                		<input type="text" class="span11" placeholder="Perumahan berfasilitas apartemen" />
+		              		</div>
+		            	</div>
+		            	<div class="control-group">
+		              		<label class="control-label">Sub Judul Tagline :</label>
+		              		<div class="controls">
+		                		<input type="text" class="span11" placeholder="Hanya 1 km dari exit toll Jatiwarna Bekasi" />
+		              		</div>
+		            	</div>
+		            	<div class="control-group">
+		              		<label class="control-label">Judul Tagline Deskripsi :</label>
+		              		<div class="controls">
+		                		<input type="text" class="span11" placeholder="Your Smart Living at Jatiwarna" />
+		              		</div>
+		            	</div>
+		            	<div class="control-group">
+		              		<label class="control-label">Deskripsi :</label>
+		              		<div class="controls">
+		                		<textarea class="span11" placeholder="Hunilo Gading Residence merupakan..." ></textarea>
+		              		</div>
+		            	</div>
+		          	</span>
+	        	</div>
+			</div>
+
+			<div class="widget-box">
+	        	<div class="widget-title"> <span class="icon"> <i class="icon-align-justify"></i> </span>
+	          		<h5>Lokasi Proyek</h5>
+	        	</div>
+	        	<div class="widget-content nopadding">
+		          	<span class="form-horizontal">
+		            	<div class="control-group">
+		              		<label class="control-label">Provinsi :</label>
+		              		<div class="controls">
+		                		<select >
+				                  <option>DKI Jakarta</option>
+				                  <option>Jawa Barat</option>
+				                </select>
+		              		</div>
+		            	</div>
+		            	<div class="control-group">
+		              		<label class="control-label">Kota :</label>
+		              		<div class="controls">
+		                		<select >
+				                  <option>Jakarta Selatan</option>
+				                  <option>Bekasi</option>
+				                </select>
+		              		</div>
+		            	</div>
+		            	<div class="control-group">
+		              		<label class="control-label">Area :</label>
+		              		<div class="controls">
+		                		<select >
+				                  <option>Tebet</option>
+				                  <option>Cluster Kamboja Tebet</option>
+				                </select>
+		              		</div>
+		            	</div>
+		            	<div class="control-group">
+		              		<label class="control-label">Alamat Lengkap :</label>
+		              		<div class="controls">
+		                		<textarea class="span11" placeholder="Jl. Vanilla IIB No 31" ></textarea>
+		              		</div>
+		            	</div>
+		            	<div class="control-group">
+		              		<label class="control-label">Kodepos :</label>
+		              		<div class="controls">
+		                		<input type="text" class="span11" placeholder="12820" />
+		              		</div>
+		            	</div>
+		          	</span>
+	        	</div>
+			</div>
+
+			<div class="widget-box">
+	        	<div class="widget-title"> <span class="icon"> <i class="icon-align-justify"></i> </span>
+	          		<h5>Detail Deskripsi Proyek</h5>
+	        	</div>
+	        	<div class="widget-content nopadding">
+		          	<span class="form-horizontal">
+		            	<div class="control-group">
+		              		<label class="control-label">Fasilitas :</label>
+		              		<div class="controls">
+		                		<textarea class="span11" placeholder="Keamanan 24 Jam, Angkutan Umum, Rumah Sakit, dll" ></textarea>
+		              		</div>
+		            	</div>
+		            	<div class="control-group">
+		              		<label class="control-label">Akses Lokasi :</label>
+		              		<div class="controls">
+		                		<textarea class="span11" placeholder="10 Menit ke Universitas Mercu Buana, 15 Menit ke Stasiun KRL, dll" ></textarea>
+		              		</div>
+		            	</div>
+		            	<div class="control-group">
+			              	<label class="control-label">Keunggulan :</label>
+			              	<div class="controls">
+			                	<label>
+			                  	<input type="checkbox" name="radios" />
+			                  	Lokasi Strategis</label>
+			                	<label>
+			                  	<input type="checkbox" name="radios" />
+			                  	Lokasi Favorit</label>
+			                	<label>
+			                  	<input type="checkbox" name="radios" />
+			                  	Nilai Investasi Tinggi</label>
+			                	<label>
+			                  	<input type="checkbox" name="radios" />
+			                  	Green Concept</label>
+			              	</div>
+			            </div>
+			            <div class="control-group">
+			              	<label class="control-label">Cocok Untuk :</label>
+			              	<div class="controls">
+			                	<label>
+			                  	<input type="checkbox" name="radios" />
+			                  	First Time Home Buyer</label>
+			                	<label>
+			                  	<input type="checkbox" name="radios" />
+			                  	Potentian Buyer</label>
+			                	<label>
+			                  	<input type="checkbox" name="radios" />
+			                  	Modern House</label>
+			                	<label>
+			                  	<input type="checkbox" name="radios" />
+			                  	Family Oriented</label>
+			                  	<label>
+			                  	<input type="checkbox" name="radios" />
+			                  	Commercial Seeker</label>
+			              	</div>
+			            </div>
+		          	</span>
+	        	</div>
+			</div>
+		</div>
+
+
+		<div class="span6">
+	    	<div class="widget-box">
+	        	<div class="widget-title"> <span class="icon"> <i class="icon-align-justify"></i> </span>
+	          		<h5>Unit Proyek</h5>
+	        	</div>
+	        	<div class="widget-content nopadding">
+		          	<span class="form-horizontal">
+		            	<div class="control-group">
+		              		<label class="control-label">Total Unit :</label>
+		              		<div class="controls">
+		                		<input type="text" class="span11" placeholder="18" />
+		              		</div>
+		            	</div>
+		            	<div class="control-group">
+		              		<label class="control-label">Nama Unit :</label>
+		              		<div class="controls">
+		                		<input type="text" class="span11" placeholder="Lavenia 2" />
+		              		</div>
+		            	</div>
+		            	<div class="control-group">
+		              		<label class="control-label">Jumlah Unit :</label>
+		              		<div class="controls">
+		                		<input type="text" class="span11" placeholder="6" />
+		              		</div>
+		            	</div>
+		            	<div class="control-group">
+		              		<label class="control-label">Harga :</label>
+		              		<div class="controls">
+		                		<input type="text" class="span11" placeholder="180.000.000" />
+		              		</div>
+		            	</div>
+		            	<div class="control-group">
+		              		<label class="control-label">Tipe :</label>
+		              		<div class="controls">
+		                		<input type="text" class="span11" placeholder="90" />
+		              		</div>
+		            	</div>
+		            	<div class="control-group">
+		              		<label class="control-label">LT/LB :</label>
+		              		<div class="controls controls-row">
+					            <input type="text" placeholder="LT (120)" class="span5 m-wrap">
+					            <input type="text" placeholder="LB (90)" class="span5 m-wrap">
+					        </div>
+		            	</div>
+		            	<div class="control-group">
+		              		<label class="control-label">KT/KM :</label>
+		              		<div class="controls controls-row">
+					            <input type="text" placeholder="KT (3)" class="span5 m-wrap">
+					            <input type="text" placeholder="KM (1)" class="span5 m-wrap">
+					        </div>
+		            	</div>
+		            	<div class="control-group">
+		              		<label class="control-label">Spesifikasi :</label>
+		              		<div class="controls">
+		                		<textarea class="span11" placeholder="Pondasi : Pondasi tapak + batu kali + sloof beton bertulang, Struktur : Beton bertulang" ></textarea>
+		              		</div>
+		            	</div>
+		            	
+		            	<br>
+		            	<div class="control-group">
+		              		<label class="control-label">Nama Unit :</label>
+		              		<div class="controls">
+		                		<input type="text" class="span11" placeholder="Omera 3" />
+		              		</div>
+		            	</div>
+		            	<div class="control-group">
+		              		<label class="control-label">Jumlah Unit :</label>
+		              		<div class="controls">
+		                		<input type="text" class="span11" placeholder="6" />
+		              		</div>
+		            	</div>
+		            	<div class="control-group">
+		              		<label class="control-label">Harga :</label>
+		              		<div class="controls">
+		                		<input type="text" class="span11" placeholder="180.000.000" />
+		              		</div>
+		            	</div>
+		            	<div class="control-group">
+		              		<label class="control-label">Tipe :</label>
+		              		<div class="controls">
+		                		<input type="text" class="span11" placeholder="90" />
+		              		</div>
+		            	</div>
+		            	<div class="control-group">
+		              		<label class="control-label">LT/LB :</label>
+		              		<div class="controls controls-row">
+					            <input type="text" placeholder="LT (120)" class="span5 m-wrap">
+					            <input type="text" placeholder="LB (90)" class="span5 m-wrap">
+					        </div>
+		            	</div>
+		            	<div class="control-group">
+		              		<label class="control-label">KT/KM :</label>
+		              		<div class="controls controls-row">
+					            <input type="text" placeholder="KT (3)" class="span5 m-wrap">
+					            <input type="text" placeholder="KM (1)" class="span5 m-wrap">
+					        </div>
+		            	</div>
+		            	<div class="control-group">
+		              		<label class="control-label">Spesifikasi :</label>
+		              		<div class="controls">
+		                		<textarea class="span11" placeholder="Pondasi : Pondasi tapak + batu kali + sloof beton bertulang, Struktur : Beton bertulang" ></textarea>
+		              		</div>
+		            	</div>
+		            	<div class="form-actions">
+			              <button type="submit" class="btn btn-success">Tambah Unit</button>
+			            </div>
+		          	</span>
+	        	</div>
+			</div>
+		</div>
+
+		<div class="row-fluid">
+		    <div class="widget-box">
+		    	<div class="widget-title"> <span class="icon"> <i class="icon-align-justify"></i> </span>
+		        	<h5>Upload Foto Properti</h5>
+		      	</div>
+		      	<div class="widget-content">
+		        	<div class="control-group">
+		          
+		        	</div>
+		      	</div>
+		    </div>
+		</div>
+
+		<div class="row-fluid">
+		    <div class="widget-box">
+		    	<div class="widget-title"> <span class="icon"> <i class="icon-align-justify"></i> </span>
+		        	<h5>Upload Foto Denah</h5>
+		      	</div>
+		      	<div class="widget-content">
+		        	<div class="control-group">
+		          
+		        	</div>
+		      	</div>
+		    </div>
+		</div>
+
+		<div class="row-fluid">
+		    <div class="form-actions">
+		    	<button type="submit" class="btn btn-success">Save</button>
+		    	<button type="submit" class="btn btn-danger">Cancel</button>
+		    </div>
+		</div>
+	</form>
+	</div>
+</div>
+{% endblock %}
