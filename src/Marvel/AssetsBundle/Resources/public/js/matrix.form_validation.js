@@ -6,75 +6,55 @@ $(document).ready(function(){
 	$('select').select2();
 	
 	// Form Validation
-    $("#basic_validate").validate({
+    $("#developer_validate").validate({
 		rules:{
-			required:{
-				required:true
-			},
-			email:{
-				required:true,
-				email: true
-			},
-			date:{
-				required:true,
-				date: true
-			},
-			url:{
-				required:true,
-				url: true
+			developer_name:{required:true},
+			email:{required:true},
+			address:{required:true},
+			mobile_phone:{required:true}
+		},
+		submitHandler: function(form) {
+			$("#btn").hide();
+			$("#loading").show();
+			var formData = new FormData(form);
+
+			var url = "/developer/post";
+
+			if($("#form_type").val() == "add"){
+				url = "/developer/post";
 			}
-		},
-		errorClass: "help-inline",
-		errorElement: "span",
-		highlight:function(element, errorClass, validClass) {
-			$(element).parents('.control-group').addClass('error');
-		},
-		unhighlight: function(element, errorClass, validClass) {
-			$(element).parents('.control-group').removeClass('error');
-			$(element).parents('.control-group').addClass('success');
-		}
-	});
-	
-	$("#number_validate").validate({
-		rules:{
-			min:{
-				required: true,
-				min:10
-			},
-			max:{
-				required:true,
-				max:24
-			},
-			number:{
-				required:true,
-				number:true
+
+			if($("#form_type").val() == "edit"){
+				url = "/developer/update";
 			}
-		},
-		errorClass: "help-inline",
-		errorElement: "span",
-		highlight:function(element, errorClass, validClass) {
-			$(element).parents('.control-group').addClass('error');
-		},
-		unhighlight: function(element, errorClass, validClass) {
-			$(element).parents('.control-group').removeClass('error');
-			$(element).parents('.control-group').addClass('success');
-		}
-	});
-	
-	$("#password_validate").validate({
-		rules:{
-			pwd:{
-				required: true,
-				minlength:6,
-				maxlength:20
-			},
-			pwd2:{
-				required:true,
-				minlength:6,
-				maxlength:20,
-				equalTo:"#pwd"
-			}
-		},
+
+         	$.ajax({
+            	type: "POST",
+            	url: url,
+            	data: formData,
+            	success: function() {
+            		$("#btn").show();
+					$("#loading").hide();
+            		alert('Yeeah.. You did it!!!');
+
+            		if($("#form_type").val() == "add"){
+						$("#developer_validate")[0].reset();
+					}
+
+					if($("#form_type").val() == "edit"){
+						window.location.reload(true);
+					}
+            		
+            	},
+            	error: function() {
+            		$("#btn").show();
+					$("#loading").hide();
+            		alert('Urmhh.. You failed. Try again later!!!');
+            	},
+            	contentType: false,
+        		processData: false
+          	});
+      	},
 		errorClass: "help-inline",
 		errorElement: "span",
 		highlight:function(element, errorClass, validClass) {

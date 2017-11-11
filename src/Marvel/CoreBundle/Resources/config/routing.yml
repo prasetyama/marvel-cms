@@ -1,11 +1,11 @@
 marvel_id_dashboard:
     path:     /dashboard/
     defaults: { _controller: MarvelCoreBundle:Default:dashboard}
-marvel_id_developer_add:
-    path:     /developer/add/
+marvel_id_proyek_developer_add:
+    path:     /proyek-developer/add/
     defaults: { _controller: MarvelDeveloperBundle:Default:add}
-marvel_id_developer_list:
-    path:     /developer/list/
+marvel_id_proyek_developer_list:
+    path:     /proyek-developer/list/
     defaults: { _controller: MarvelCoreBundle:Default:dashboard}
 marvel_id_secondary_add:
     path:     /secondary/add/
@@ -13,4 +13,23 @@ marvel_id_secondary_add:
 marvel_id_secondary_list:
     path:     /secondary/list/
     defaults: { _controller: MarvelCoreBundle:Default:dashboard}
+marvel_id_developer_add:
+    path:     /developer/add/
+    defaults: { _controller: MarvelDeveloperBundle:Default:addDeveloper}
+marvel_id_developer_list:
+    path:     /developer/list/
+    defaults: { _controller: MarvelDeveloperBundle:Default:listDeveloper}
+marvel_id_developer_post:
+    path:     /developer/post
+    defaults: { _controller: MarvelDeveloperBundle:Default:postDeveloper}
+    requirements:
+        _method: POST
+marvel_id_developer_edit_form:
+    path:     /developer/edit/{id}
+    defaults: { _controller: MarvelDeveloperBundle:Default:editDeveloper, id: 0 }
+marvel_id_developer_update:
+    path:     /developer/update
+    defaults: { _controller: MarvelDeveloperBundle:Default:updateDeveloper}
+    requirements:
+        _method: POST
   
