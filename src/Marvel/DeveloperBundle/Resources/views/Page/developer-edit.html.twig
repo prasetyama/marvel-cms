@@ -1,0 +1,85 @@
+{% extends 'MarvelAssetsBundle:Default:base.html.twig' %}
+
+{% block content %}
+<div id="content-header">
+	<div id="breadcrumb"> 
+		<a href="index.html" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Beranda</a> 
+		<a href="#" class="tip-bottom">Developer</a> 
+		<a href="#" class="current">Edit Data</a> 
+	</div>
+	<h1>Edit Data Developer</h1>
+</div>
+
+<div class="container-fluid">
+	<hr>
+	<div class="row-fluid">
+		<div class="span12">
+        <div class="widget-box">
+          <div class="widget-title"> <span class="icon"> <i class="icon-info-sign"></i> </span>
+            <h5>Form Developer</h5>
+          </div>
+          <div class="widget-content nopadding">
+            <form class="form-horizontal" method="post" enctype="multipart/form-data" name="developer_validate" id="developer_validate" novalidate="novalidate">
+              <input type="hidden" name="form_type" id="form_type" value="edit">
+              <input type="hidden" name="developer_id" id="developer_id" value="{{data.developer_id}}">
+              <div class="control-group">
+                <label class="control-label">Nama Developer</label>
+                <div class="controls">
+                  <input type="text" name="developer_name" id="developer_name" value="{{data.developer_name}}">
+                </div>
+              </div>
+              <div class="control-group">
+                <label class="control-label">Alamat</label>
+                <div class="controls">
+                  <textarea id="address" name="address">{{data.developer_address}}</textarea>
+                </div>
+              </div>
+              <div class="control-group">
+                <label class="control-label">Email</label>
+                <div class="controls">
+                  <input type="email" name="email" id="email" value="{{data.developer_email}}">
+                </div>
+              </div>
+              <div class="control-group">
+                <label class="control-label">No. Tlp</label>
+                <div class="controls">
+                  <input type="text" name="phone" id="phone" value="{{data.developer_phone}}">
+                </div>
+              </div>
+              <div class="control-group">
+                <label class="control-label">No. Handphone</label>
+                <div class="controls">
+                  <input type="text" name="mobile_phone" id="mobile_phone" value="{{data.developer_mobilephone}}">
+                </div>
+              </div>
+              <div class="control-group">
+                <label class="control-label">Catatan</label>
+                <div class="controls">
+                  <textarea id="notes" name="notes">{{data.developer_notes}}</textarea>
+                </div>
+              </div>
+              <div class="control-group">
+                <label class="control-label"></label>
+                <div class="controls">
+                  <img src="/uploads/logo-developer/{{data.developer_logo}}">
+                </div>
+              </div>
+              <div class="control-group">
+                <label class="control-label">Logo</label>
+                <div class="controls">
+                  <input type="file" id="logo" name="logo" />
+                </div>
+              </div>
+              <div class="form-actions" id="loading" style="display:none;">
+                LOADING....
+              </div>
+              <div class="form-actions" id="btn">
+                <input type="submit" value="Save" class="btn btn-success">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>	
+	</div>
+</div>
+{% endblock %}
