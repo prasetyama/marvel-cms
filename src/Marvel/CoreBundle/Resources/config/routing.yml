@@ -7,9 +7,26 @@ marvel_id_proyek_developer_add:
 marvel_id_proyek_developer_list:
     path:     /proyek-developer/list/
     defaults: { _controller: MarvelCoreBundle:Default:dashboard}
+marvel_id_agent_add:
+    path:     /agent/add/
+    defaults: { _controller: MarvelSecondaryBundle:Default:addAgent}
+marvel_id_agent_list:
+    path:     /agent/list/
+    defaults: { _controller: MarvelSecondaryBundle:Default:listAgent}
+marvel_id_company_add:
+    path:     /company/add/
+    defaults: { _controller: MarvelSecondaryBundle:Default:addCompany}
+marvel_id_company_list:
+    path:     /company/list/
+    defaults: { _controller: MarvelSecondaryBundle:Default:listCompany}
+marvel_id_company_post:
+    path:     /company/post
+    defaults: { _controller: MarvelSecondaryBundle:Default:postCompany}
+    requirements:
+        _method: POST
 marvel_id_secondary_add:
     path:     /secondary/add/
-    defaults: { _controller: MarvelCoreBundle:Default:dashboard}
+    defaults: { _controller: MarvelSecondaryBundle:Default:add}
 marvel_id_secondary_list:
     path:     /secondary/list/
     defaults: { _controller: MarvelCoreBundle:Default:dashboard}

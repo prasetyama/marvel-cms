@@ -1,8 +1,8 @@
 <?php
 
-namespace Marvel\DeveloperBundle\Manager;
+namespace Marvel\SecondaryBundle\Manager;
 
-class DeveloperManager{
+class SecondaryManager{
 
 	protected $conn;
 
@@ -12,18 +12,18 @@ class DeveloperManager{
 
   }
 
-  public function insertDeveloper($param = array() ,  $fileName = ""){
+  public function insertCompany($param = array() ,  $fileName = ""){
 
-  	$sql = "INSERT INTO developer 
-          		(developer_name, developer_address, developer_email, developer_phone, developer_mobilephone, developer_notes, developer_logo, status, post_date) 
-          		VALUES ('".$param['developer_name']."', '".$param['address']."', '".$param['email']."', '".$param['phone']."', '".$param['mobile_phone']."', '".$param['notes']."', '".$fileName."', 1, NOW());";
+  	$sql = "INSERT INTO company_agent 
+          		(company_name, company_address, company_phone, company_image, created_date) 
+          		VALUES ('".$param['company_name']."', '".$param['company_address']."', '".$param['company_phone']."','".$fileName."', NOW());";
 
     	$stmt = $this->conn->prepare($sql);
     	
     	if($stmt->execute()){
 
     		$res = (int) $this->conn->lastInsertId();	
-    		return array('developerID' => $res);
+    		return array('companyID' => $res);
     	
     	}else{
     		return array();
@@ -63,9 +63,9 @@ class DeveloperManager{
     }
   }
 
-  public function showAllDeveloper(){
+  public function showAllCompany(){
 
-    $sql = "SELECT * FROM developer WHERE status = 1";
+    $sql = "SELECT * FROM company_agent";
 
     $stmt = $this->conn->prepare($sql);
 

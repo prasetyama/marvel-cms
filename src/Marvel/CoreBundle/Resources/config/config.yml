@@ -1,3 +1,4 @@
 marvel_core:
     upload:
         logoDeveloper: "%kernel.root_dir%/../web/uploads/logo-developer/"
+        logoCompany: "%kernel.root_dir%/../web/uploads/logo-company/"

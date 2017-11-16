@@ -64,8 +64,14 @@
       </li>
       <li class="submenu"> <a href="#"><i class="icon icon-th-list"></i> <span>Agent Properti</span></a>
         <ul>
-          <li><a href="{{ path('marvel_id_secondary_add') }}">Tambah Data</a></li>
-          <li><a href="{{ path('marvel_id_secondary_list') }}">List Data</a></li>
+          <li><a href="{{ path('marvel_id_agent_add') }}">Tambah Data</a></li>
+          <li><a href="{{ path('marvel_id_agent_list') }}">List Data</a></li>
+        </ul>
+      </li>
+      <li class="submenu"> <a href="#"><i class="icon icon-th-list"></i> <span>Kantor Agent Properti</span></a>
+        <ul>
+          <li><a href="{{ path('marvel_id_company_add') }}">Tambah Data</a></li>
+          <li><a href="{{ path('marvel_id_company_list') }}">List Data</a></li>
         </ul>
       </li>
       <li class="submenu"> <a href="#"><i class="icon icon-th-list"></i> <span>Listing Secondary</span></a>
@@ -105,6 +111,7 @@
     '@MarvelAssetsBundle/Resources/public/js/jquery.dataTables.min.js' 
     '@MarvelAssetsBundle/Resources/public/js/matrix.tables.min.js'
     '@MarvelAssetsBundle/Resources/public/js/global.min.js' %}
+    '@MarvelAssetsBundle/Resources/public/js/company.min.js' %}
   <script src="{{ asset_url }}"></script>
   {% endjavascripts %} {% block javascript %}{% endblock %} 
 

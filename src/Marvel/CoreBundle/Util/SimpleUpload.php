@@ -37,7 +37,7 @@ class SimpleUpload{
 	    return true;
 	}
 
-	public function fileUpload($file, String $title, String $targetPath){
+	public function fileUpload($file, $title, $targetPath){
 		
 		$slug = new SlugHelper();
         $slug = $slug->makeSlug($title);
