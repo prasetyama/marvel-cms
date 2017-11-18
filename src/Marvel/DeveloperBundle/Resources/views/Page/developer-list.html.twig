@@ -54,3 +54,16 @@
 	</div>
 </div>
 {% endblock %}
+
+{% block javascript %}
+    {% javascripts filter="?jsqueeze"
+      '@MarvelAssetsBundle/Resources/public/js/jquery.uniform.min.js' 
+      '@MarvelAssetsBundle/Resources/public/js/select2.min.js'
+      '@MarvelAssetsBundle/Resources/public/js/jquery.peity.min.js'
+      '@MarvelAssetsBundle/Resources/public/js/matrix.popover.min.js'
+      '@MarvelAssetsBundle/Resources/public/js/jquery.dataTables.min.js' 
+      '@MarvelAssetsBundle/Resources/public/js/matrix.tables.min.js' 
+    %}
+    <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+{% endblock %}
