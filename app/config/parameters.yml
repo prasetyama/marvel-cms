@@ -1,14 +1,8 @@
 # This file is auto-generated during the composer install
 parameters:
-<<<<<<< HEAD
     database_host: 127.0.0.1
     database_port: 3306
     database_name: ikab_hunilo
-=======
-    database_host: localhost
-    database_port: null
-    database_name: hunilo
->>>>>>> fd03df974d6da248efa3d5b74ba4bb618a3bc3cf
     database_user: root
     database_password: sriAW1409
     mailer_transport: smtp

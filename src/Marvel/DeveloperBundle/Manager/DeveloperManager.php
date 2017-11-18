@@ -6,33 +6,33 @@ use Marvel\CoreBundle\Util\SlugHelper;
 
 class DeveloperManager{
 
-	protected $conn;
+  protected $conn;
 
-	public function __construct($em){
-     	
+  public function __construct($em){
+      
     $this->conn = $em->getConnection();
 
   }
 
-  public function insertDeveloper($param = array() ,  $fileName = ""){
+  public function insertDeveloper(array $param = array(), String $fileName = ""){
 
-  	$sql = "INSERT INTO developer 
-          		(developer_name, developer_address, developer_email, developer_phone, developer_mobilephone, developer_notes, developer_logo, status, post_date) 
-          		VALUES ('".$param['developer_name']."', '".$param['address']."', '".$param['email']."', '".$param['phone']."', '".$param['mobile_phone']."', '".$param['notes']."', '".$fileName."', 1, NOW());";
+    $sql = "INSERT INTO developer 
+              (developer_name, developer_address, developer_email, developer_phone, developer_mobilephone, developer_notes, developer_logo, status, post_date) 
+              VALUES ('".$param['developer_name']."', '".$param['address']."', '".$param['email']."', '".$param['phone']."', '".$param['mobile_phone']."', '".$param['notes']."', '".$fileName."', 1, NOW());";
 
-    	$stmt = $this->conn->prepare($sql);
-    	
-    	if($stmt->execute()){
+      $stmt = $this->conn->prepare($sql);
+      
+      if($stmt->execute()){
 
-    		$res = (int) $this->conn->lastInsertId();	
-    		return array('developerID' => $res);
-    	
-    	}else{
-    		return array();
-    	}	
+        $res = (int) $this->conn->lastInsertId(); 
+        return array('developerID' => $res);
+      
+      }else{
+        return array();
+      } 
   }
 
-  public function updateDeveloper( $param = array(), $fileName = ""){
+  public function updateDeveloper(array $param = array(), String $fileName = ""){
 
     $up['developer_name'] = $param['developer_name'];
     $up['developer_address'] = $param['address'];

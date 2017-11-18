@@ -17,14 +17,13 @@ class Configuration implements ConfigurationInterface{
                         ->scalarNode('logoDeveloper')
                             ->isRequired()
                         ->end()
-<<<<<<< HEAD
                         ->scalarNode('tmp')
                             ->isRequired()
                         ->end()
                         ->scalarNode('proyek')
-=======
+                            ->isRequired()
+                        ->end()
                         ->scalarNode('logoCompany')
->>>>>>> fd03df974d6da248efa3d5b74ba4bb618a3bc3cf
                             ->isRequired()
                         ->end()
                     ->end()
