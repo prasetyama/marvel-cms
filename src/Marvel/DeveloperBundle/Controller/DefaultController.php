@@ -319,6 +319,10 @@ class DefaultController extends BaseController
                     }else{
                         $act->updatePrimary($res['projectID'],'proyek_gallery',$post['gallerySetPrimary']);    
                     }   
+                }else{
+                    if(!empty($gallery)){
+                        $resGallery = $act->insertProyekGallery($res['projectID'],$gallery,'proyek_gallery',$post['gallerySetPrimary']);
+                    }    
                 }
 
                 if(!empty($post['denahSetPrimary'])){
@@ -328,6 +332,10 @@ class DefaultController extends BaseController
                     }else{
                         $act->updatePrimary($res['projectID'],'proyek_gallery_denah',$post['denahSetPrimary']);   
                     }  
+                }else{
+                    if(!empty($denah)){ 
+                        $resDenah = $act->insertProyekGallery($res['projectID'],$denah,'proyek_gallery_denah',$post['denahSetPrimary']);  
+                    }    
                 }          
 
             }
