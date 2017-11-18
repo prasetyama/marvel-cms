@@ -1,0 +1,63 @@
+{% extends 'MarvelAssetsBundle:Default:base.html.twig' %}
+
+{% block content %}
+<div id="content-header">
+	<div id="breadcrumb"> 
+		<a href="index.html" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Beranda</a> 
+		<a href="#" class="tip-bottom">Kantor Agent</a> 
+		<a href="#" class="current">Tambah Data</a> 
+	</div>
+	<h1>Tambah Kantor Agent</h1>
+</div>
+
+<div class="container-fluid">
+	<hr>
+	<div class="row-fluid">
+	<form method="post" enctype="multipart/form-data" name="company_validate" id="company_validate" novalidate="novalidate">
+		<input type="hidden" name="form_type" id="form_type" value="add">
+		<div class="span6">
+	    	<div class="widget-box">
+	        	<div class="widget-title"> <span class="icon"> <i class="icon-align-justify"></i> </span>
+	          		<h5>Form Kantor Agent</h5>
+	        	</div>
+	        	<div class="widget-content nopadding">
+		          	<span class="form-horizontal">
+		            	<div class="control-group">
+		              		<label class="control-label">Nama Kantor Agent :</label>
+		              		<div class="controls">
+		                		<input type="text" class="span11" name="company_name" id="company_name" />
+		              		</div>
+		            	</div>
+		            	<div class="control-group">
+		              		<label class="control-label">Alamat Kantor Agent :</label>
+		              		<div class="controls">
+		                		<textarea class="span11" id="company_address" name="company_address" ></textarea>
+		              		</div>
+		            	</div>
+		            	<div class="control-group">
+		              		<label class="control-label">Nomor Telpon Kantor Agent :</label>
+		              		<div class="controls">
+		                		<input type="text" class="span11" name="company_phone" id="company_phone" />
+		              		</div>
+		            	</div>
+		            	 <div class="control-group">
+			                <label class="control-label">Logo</label>
+			                <div class="controls">
+			                  <input type="file" id="logo" name="logo" />
+			                </div>
+		              	</div>
+		              	<div class="form-actions" id="loading" style="display:none;">
+			                LOADING....
+		              	</div>
+		              	<div class="form-actions" id="btn">
+				            <input type="submit" value="Save" class="btn btn-success">
+			          	</div>
+		            	
+		          	</span>
+	        	</div>
+			</div>
+		</div>
+	</form>
+	</div>
+</div>
+{% endblock %}

@@ -13,8 +13,12 @@ class MarvelCoreExtension extends Extension{
         $config = $this->processConfiguration($configuration, $configs);
 
         $container->setParameter('marvel.core.upload_logo_developer', $config['upload']['logoDeveloper']);
+<<<<<<< HEAD
         $container->setParameter('marvel.core.tmp', $config['upload']['tmp']);
         $container->setParameter('marvel.core.proyekImg', $config['upload']['proyek']);
+=======
+        $container->setParameter('marvel.core.upload_logo_company', $config['upload']['logoCompany']);
+>>>>>>> fd03df974d6da248efa3d5b74ba4bb618a3bc3cf
 
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.yml');
