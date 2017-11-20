@@ -14,7 +14,7 @@ class DeveloperManager{
 
   }
 
-  public function insertDeveloper(array $param = array(), String $fileName = ""){
+  public function insertDeveloper(array $param = array(), String $fileName = NULL){
 
     $sql = "INSERT INTO developer 
               (developer_name, developer_address, developer_email, developer_phone, developer_mobilephone, developer_notes, developer_logo, status, post_date) 
@@ -32,7 +32,7 @@ class DeveloperManager{
       } 
   }
 
-  public function updateDeveloper(array $param = array(), String $fileName = ""){
+  public function updateDeveloper(array $param = array(), String $fileName = NULL){
 
     $up['developer_name'] = $param['developer_name'];
     $up['developer_address'] = $param['address'];
