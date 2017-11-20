@@ -34,7 +34,7 @@ class DefaultController extends BaseController
             }
 
             return $this->render('MarvelDeveloperBundle:Page:developer-list.html.twig',$res);
-
+         
         } catch (\Exception $e) {
             return $this->errorResponse('Post developer failed, Please try again later', HttpStatusHelper::HTTP_PRECONDITION_FAILED);
         }
