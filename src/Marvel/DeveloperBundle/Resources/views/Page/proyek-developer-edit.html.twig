@@ -13,9 +13,9 @@
 	<div id="breadcrumb"> 
 		<a href="index.html" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Beranda</a> 
 		<a href="#" class="tip-bottom">Proyek Developer</a> 
-		<a href="#" class="current">Tambah Data</a> 
+		<a href="#" class="current">Edit Data</a> 
 	</div>
-	<h1>Tambah Data Proyek Developer</h1>
+	<h1>Edit Data Proyek Developer</h1>
 </div>
 
 <div class="container-fluid">
@@ -32,7 +32,7 @@
 		            	<div class="control-group">
 		              		<label class="control-label">Nama Proyek :</label>
 		              		<div class="controls">
-		                		<input type="text" name="projectName" id="projectName" class="span11" placeholder="Hunilo Gading Residence" />
+		                		<input type="text" name="projectName" id="projectName" class="span11" value="{{data.project_name}}" placeholder="Hunilo Gading Residence" />
 		              		</div>
 		            	</div>
 		            	<div class="control-group">
@@ -53,32 +53,32 @@
 		            	<div class="control-group">
 		              		<label class="control-label">Harga :</label>
 		              		<div class="controls controls-row">
-					            <input type="text" name="startPrice" id="startPrice" placeholder="235.000.000" class="span5 m-wrap" onkeypress="return isNumberKey(event)" onkeyup="numberFormat(this)" autocomplete="off">
-					            <input type="text" name="endPrice" id="endPrice" placeholder="400.000.000" class="span5 m-wrap" onkeypress="return isNumberKey(event)" onkeyup="numberFormat(this)" autocomplete="off">
+					            <input type="text" name="startPrice" id="startPrice" placeholder="235.000.000" class="span5 m-wrap" onkeypress="return isNumberKey(event)" onkeyup="numberFormat(this)" autocomplete="off" value="{{data.project_start_price | number_format(0, '.', '.')}}">
+					            <input type="text" name="endPrice" id="endPrice" placeholder="400.000.000" class="span5 m-wrap" onkeypress="return isNumberKey(event)" onkeyup="numberFormat(this)" autocomplete="off" value="{{data.project_end_price | number_format(0, '.', '.')}}">
 					        </div>
 		            	</div>
 		            	<div class="control-group">
 		              		<label class="control-label">Judul Tagline :</label>
 		              		<div class="controls">
-		                		<input type="text" id="titleTagline" name="titleTagline" class="span11" placeholder="Perumahan berfasilitas apartemen" />
+		                		<input type="text" id="titleTagline" name="titleTagline" class="span11" value="{{data.project_title_tagline}}" placeholder="Perumahan berfasilitas apartemen" />
 		              		</div>
 		            	</div>
 		            	<div class="control-group">
 		              		<label class="control-label">Sub Judul Tagline :</label>
 		              		<div class="controls">
-		                		<input type="text" id="subtitleTagline" name="subtitleTagline" class="span11" placeholder="Hanya 1 km dari exit toll Jatiwarna Bekasi" />
+		                		<input type="text" id="subtitleTagline" name="subtitleTagline" class="span11" value="{{data.project_subtitle_tagline}}" placeholder="Hanya 1 km dari exit toll Jatiwarna Bekasi" />
 		              		</div>
 		            	</div>
 		            	<div class="control-group">
 		              		<label class="control-label">Judul Tagline Deskripsi :</label>
 		              		<div class="controls">
-		                		<input type="text" id="titleTaglineDesc" name="titleTaglineDesc" class="span11" placeholder="Your Smart Living at Jatiwarna" />
+		                		<input type="text" id="titleTaglineDesc" name="titleTaglineDesc" class="span11" value="{{data.project_description_tagline}}" placeholder="Your Smart Living at Jatiwarna" />
 		              		</div>
 		            	</div>
 		            	<div class="control-group">
 		              		<label class="control-label">Deskripsi :</label>
 		              		<div class="controls">
-		                		<textarea id="desc" name="desc" class="span11" placeholder="Hunilo Gading Residence merupakan..." ></textarea>
+		                		<textarea id="desc" name="desc" class="span11" placeholder="Hunilo Gading Residence merupakan..." >{{data.project_description}}</textarea>
 		              		</div>
 		            	</div>
 		          	</span>
@@ -118,13 +118,13 @@
 		            	<div class="control-group">
 		              		<label class="control-label">Alamat Lengkap :</label>
 		              		<div class="controls">
-		                		<textarea id="address" name="address" class="span11" placeholder="Jl. Vanilla IIB No 31" ></textarea>
+		                		<textarea id="address" name="address" class="span11" placeholder="Jl. Vanilla IIB No 31" >{{data.project_address}}</textarea>
 		              		</div>
 		            	</div>
 		            	<div class="control-group">
 		              		<label class="control-label">Kodepos :</label>
 		              		<div class="controls">
-		                		<input id="postcode" name="postcode" type="text" class="span11" placeholder="12820" />
+		                		<input id="postcode" name="postcode" type="text" class="span11" value="{{data.project_postcode}}" placeholder="12820" />
 		              		</div>
 		            	</div>
 		          	</span>
@@ -140,13 +140,13 @@
 		            	<div class="control-group">
 		              		<label class="control-label">Fasilitas :</label>
 		              		<div class="controls">
-		                		<textarea id="facility" name="facility" class="span11" placeholder="Keamanan 24 Jam, Angkutan Umum, Rumah Sakit, dll" ></textarea>
+		                		<textarea id="facility" name="facility" class="span11" placeholder="Keamanan 24 Jam, Angkutan Umum, Rumah Sakit, dll" >{{data.project_facility}}</textarea>
 		              		</div>
 		            	</div>
 		            	<div class="control-group">
 		              		<label class="control-label">Akses Lokasi :</label>
 		              		<div class="controls">
-		                		<textarea id="access" name="access" class="span11" placeholder="10 Menit ke Universitas Mercu Buana, 15 Menit ke Stasiun KRL, dll" ></textarea>
+		                		<textarea id="access" name="access" class="span11" placeholder="10 Menit ke Universitas Mercu Buana, 15 Menit ke Stasiun KRL, dll" >{{data.project_access}}</textarea>
 		              		</div>
 		            	</div>
 		            	<!--
@@ -205,54 +205,57 @@
 		            	<div class="control-group">
 		              		<label class="control-label">Total Unit :</label>
 		              		<div class="controls">
-		                		<input type="text" name="unitTotalAll" id="unitTotalAll" class="span11" placeholder="18" />
+		                		<input type="text" name="unitTotalAll" id="unitTotalAll" class="span11" value="{{data.project_total_unit}}" placeholder="18" />
 		              		</div>
 		            	</div>
 
+		            	{% for list in data.project_unit.unit %}
 		            	<div class="control-group">
 		              		<label class="control-label">Nama Unit :</label>
 		              		<div class="controls">
-		                		<input type="text" name="unitName[]" id="unitName" class="span11" placeholder="Lavenia 2" />
+		                		<input type="text" name="unitName[]" id="unitName" value="{{list.unitName}}" class="span11" placeholder="Lavenia 2" />
 		              		</div>
 		            	</div>
 		            	<div class="control-group">
 		              		<label class="control-label">Jumlah Unit :</label>
 		              		<div class="controls">
-		                		<input type="text" name="unitTotal[]" id="unitTotal" class="span11" placeholder="6" />
+		                		<input type="text" name="unitTotal[]" id="unitTotal" class="span11" value="{{list.unitTotal}}" placeholder="6" />
 		              		</div>
 		            	</div>
 		            	<div class="control-group">
 		              		<label class="control-label">Harga :</label>
 		              		<div class="controls">
-		                		<input type="text" name="unitPrice[]" id="unitPrice" class="span11" placeholder="180.000.000" onkeypress="return isNumberKey(event)" onkeyup="numberFormat(this)" autocomplete="off" />
+		                		<input type="text" name="unitPrice[]" id="unitPrice" class="span11" placeholder="180.000.000" onkeypress="return isNumberKey(event)" onkeyup="numberFormat(this)" autocomplete="off" value="{{list.unitPrice | number_format(0, '.', '.')}}" />
 		              		</div>
 		            	</div>
 		            	<div class="control-group">
 		              		<label class="control-label">Tipe :</label>
 		              		<div class="controls">
-		                		<input type="text" name="unitType[]" id="unitType" class="span11" placeholder="90" />
+		                		<input type="text" name="unitType[]" id="unitType" class="span11" value="{{list.unitType}}" placeholder="90" />
 		              		</div>
 		            	</div>
 		            	<div class="control-group">
 		              		<label class="control-label">LT/LB :</label>
 		              		<div class="controls controls-row">
-					            <input type="text" name="unitLT[]" id="unitLT" placeholder="LT (120)" class="span5 m-wrap">
-					            <input type="text" name="unitLB[]" id="unitLB" placeholder="LB (90)" class="span5 m-wrap">
+					            <input type="text" name="unitLT[]" id="unitLT" placeholder="LT (120)" value="{{list.unitLT}}" class="span5 m-wrap">
+					            <input type="text" name="unitLB[]" id="unitLB" placeholder="LB (90)" value="{{list.unitLB}}" class="span5 m-wrap">
 					        </div>
 		            	</div>
 		            	<div class="control-group">
 		              		<label class="control-label">KT/KM :</label>
 		              		<div class="controls controls-row">
-					            <input type="text" name="unitKT[]" id="unitKT" placeholder="KT (3)" class="span5 m-wrap">
-					            <input type="text" name="unitKM[]" id="unitKM" placeholder="KM (1)" class="span5 m-wrap">
+					            <input type="text" name="unitKT[]" id="unitKT" placeholder="KT (3)" value="{{list.unitKT}}" class="span5 m-wrap">
+					            <input type="text" name="unitKM[]" id="unitKM" placeholder="KM (1)" value="{{list.unitKM}}" class="span5 m-wrap">
 					        </div>
 		            	</div>
 		            	<div class="control-group">
 		              		<label class="control-label">Spesifikasi :</label>
 		              		<div class="controls">
-		                		<textarea class="span11" name="unitSpesifikasi[]" id="unitSpesifikasi" placeholder="Pondasi : Pondasi tapak + batu kali + sloof beton bertulang, Struktur : Beton bertulang" ></textarea>
+		                		<textarea class="span11" name="unitSpesifikasi[]" id="unitSpesifikasi" placeholder="Pondasi : Pondasi tapak + batu kali + sloof beton bertulang, Struktur : Beton bertulang" >{{list.unitSpesifikasi}}</textarea>
 		              		</div>
 		            	</div>
+		            	<br>
+		            	{% endfor %}
 
 			            </span>
 
@@ -298,7 +301,8 @@
             </div>
             <input type="hidden" name="token_gallery" id="token_gallery" value="gallery_{{token}}">
 		   	<input type="hidden" name="token_denah" id="token_denah" value="denah_{{token}}">
-		   	<input type="hidden" name="gallerySetPrimary" id="gallerySetPrimary" value="">
+			<input type="hidden" name="project_id" id="project_id" value="{{data.project_id}}">
+			<input type="hidden" name="gallerySetPrimary" id="gallerySetPrimary" value="">
 			<input type="hidden" name="denahSetPrimary" id="denahSetPrimary" value="">
 		    <div class="form-actions" id="btn">
 		    	<button type="submit" class="btn btn-success">Save</button>
@@ -307,6 +311,19 @@
 	</form>
 	</div>
 </div>
+
+<script>
+var propertyTypeID = "{{data.property_type_id}}",
+	developerID = "{{data.developer_id}}",
+	areaID = "{{data.area_id}}",
+	cityID = "{{data.city_id}}",
+	provinceID = "{{data.province_id}}",
+	proyekGalleryinitialPreview = {{ proyekGallery.initialPreview|json_encode|raw }},
+	proyekGalleryinitialPreviewConfig = {{ proyekGallery.initialPreviewConfig|json_encode|raw }},
+	proyekDenahinitialPreview = {{ proyekDenah.initialPreview|json_encode|raw }},
+	proyekDenahinitialPreviewConfig = {{ proyekDenah.initialPreviewConfig|json_encode|raw }};
+</script>
+
 {% endblock %}
 
 {% block javascript %}
@@ -320,7 +337,7 @@
     	'@MarvelAssetsBundle/Resources/public/js/matrix.form_common.min.js' 
     	'@MarvelAssetsBundle/Resources/public/js/jquery.peity.min.js'
     	'@MarvelAssetsBundle/Resources/public/js/matrix.popover.min.js'  
-    	'@MarvelAssetsBundle/Resources/public/js/proyek.developer.min.js' 
+    	'@MarvelAssetsBundle/Resources/public/js/proyek.developer.edit.min.js' 
     %}
     <script src="{{ asset_url }}"></script>
     {% endjavascripts %}

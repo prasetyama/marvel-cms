@@ -1,24 +1,47 @@
 marvel_id_dashboard:
     path:     /dashboard/
     defaults: { _controller: MarvelCoreBundle:Default:dashboard}
+
+## Start Route of Proyek Developer ##
 marvel_id_proyek_developer_add:
     path:     /proyek-developer/add/
     defaults: { _controller: MarvelDeveloperBundle:Default:add}
 marvel_id_proyek_developer_list:
     path:     /proyek-developer/list/
-    defaults: { _controller: MarvelCoreBundle:Default:dashboard}
+    defaults: { _controller: MarvelDeveloperBundle:Default:listProyekDeveloper}
+marvel_id_proyek_developer_post:
+    path:     /proyek-developer/post
+    defaults: { _controller: MarvelDeveloperBundle:Default:postProyekDeveloper}
+    requirements:
+        _method: POST
+marvel_id_proyek_developer_update:
+    path:     /proyek-developer/update
+    defaults: { _controller: MarvelDeveloperBundle:Default:updateProyekDeveloper}
+    requirements:
+        _method: POST
+marvel_id_proyek_developer_edit_form:
+    path:     /proyek-developer/edit/{id}
+    defaults: { _controller: MarvelDeveloperBundle:Default:editProyekDeveloper, id: 0 }
+## End Route of Proyek Developer ##
+
+## Start Route of Listing Secondary ##
 marvel_id_secondary_add:
     path:     /secondary/add/
     defaults: { _controller: MarvelCoreBundle:Default:dashboard}
 marvel_id_secondary_list:
     path:     /secondary/list/
     defaults: { _controller: MarvelCoreBundle:Default:dashboard}
+## End Route of Listing Secondary ##
+
+## Start Route of Developer ##
 marvel_id_developer_add:
     path:     /developer/add/
     defaults: { _controller: MarvelDeveloperBundle:Default:addDeveloper}
 marvel_id_developer_list:
     path:     /developer/list/
     defaults: { _controller: MarvelDeveloperBundle:Default:listDeveloper}
+    requirements:
+        _method: GET
 marvel_id_developer_post:
     path:     /developer/post
     defaults: { _controller: MarvelDeveloperBundle:Default:postDeveloper}
@@ -32,4 +55,70 @@ marvel_id_developer_update:
     defaults: { _controller: MarvelDeveloperBundle:Default:updateDeveloper}
     requirements:
         _method: POST
+## End Route of Developer ##
+
+## Start Route of Location ##
+marvel_province:
+    path:     /bridge/province
+    defaults: { _controller: MarvelCoreBundle:Default:listProvince}
+    requirements:
+        _method: GET
+marvel_city:
+    path:     /bridge/city
+    defaults: { _controller: MarvelCoreBundle:Default:listCity}
+    requirements:
+        _method: GET
+marvel_area:
+    path:     /bridge/area
+    defaults: { _controller: MarvelCoreBundle:Default:listArea}
+    requirements:
+        _method: GET
+## End Route of Location ##
+
+## Start General of Properti ##
+marvel_property_type:
+    path:     /bridge/propertytype
+    defaults: { _controller: MarvelCoreBundle:Default:listPropertyType}
+    requirements:
+        _method: GET
+## End General of Properti ##
+
+## Start Upload image ##
+marvel_upload_image:
+    path:     /upload/post
+    defaults: { _controller: MarvelCoreBundle:Default:upload}
+    requirements:
+        _method: POST
+marvel_delete_image:
+    path:     /upload/delete
+    defaults: { _controller: MarvelCoreBundle:Default:deleteImg}
+    requirements:
+        _method: POST
+## End Upload image ##
+
+## Start Route of Listing Secondary ##
+marvel_id_agent_add:
+    path:     /agent/add/
+    defaults: { _controller: MarvelSecondaryBundle:Default:addAgent}
+marvel_id_agent_list:
+    path:     /agent/list/
+    defaults: { _controller: MarvelSecondaryBundle:Default:listAgent}
+marvel_id_company_add:
+    path:     /company/add/
+    defaults: { _controller: MarvelSecondaryBundle:Default:addCompany}
+marvel_id_company_list:
+    path:     /company/list/
+    defaults: { _controller: MarvelSecondaryBundle:Default:listCompany}
+marvel_id_company_post:
+    path:     /company/post
+    defaults: { _controller: MarvelSecondaryBundle:Default:postCompany}
+    requirements:
+        _method: POST
+marvel_id_secondary_add:
+    path:     /secondary/add/
+    defaults: { _controller: MarvelSecondaryBundle:Default:add}
+marvel_id_secondary_list:
+    path:     /secondary/list/
+    defaults: { _controller: MarvelCoreBundle:Default:dashboard}
+## End Route of Listing Secondary ##
   

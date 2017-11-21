@@ -1,0 +1,97 @@
+{% extends 'MarvelAssetsBundle:Default:base.html.twig' %}
+
+{% block content %}
+<div id="content-header">
+	<div id="breadcrumb"> 
+		<a href="index.html" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Beranda</a> 
+		<a href="#" class="tip-bottom">Agent Properti</a> 
+		<a href="#" class="current">Tambah Data</a> 
+	</div>
+	<h1>Tambah Data Agent</h1>
+</div>
+
+<div class="container-fluid">
+	<hr>
+	<div class="row-fluid">
+	<form action="#" method="get">
+		<div class="span6">
+	    	<div class="widget-box">
+	        	<div class="widget-title"> <span class="icon"> <i class="icon-align-justify"></i> </span>
+	          		<h5>Form Agent</h5>
+	        	</div>
+	        	<div class="widget-content nopadding">
+		          	<span class="form-horizontal">
+		            	<div class="control-group">
+		              		<label class="control-label">Nama Agent :</label>
+		              		<div class="controls">
+		                		<input type="text" class="span11" name="agent_name" id="agent_name" />
+		              		</div>
+		            	</div>
+		            	<div class="control-group">
+		              		<label class="control-label">Kantor Agent :</label>
+		              		<div class="controls">
+		                		<input type="text" class="span11" name="agent_office" id="agent_office" />
+		              		</div>
+		            	</div>
+		            	<div class="control-group">
+		              		<label class="control-label">Nomor Handphone Agent :</label>
+		              		<div class="controls">
+		                		<input type="text" class="span11" name="agent_phone" id="agent_phone" />
+		              		</div>
+		            	</div>
+		            	<div class="control-group">
+		              		<label class="control-label">Email Agent :</label>
+		              		<div class="controls">
+		                		<input type="text" class="span11" name="agent_email" id="agent_email" />
+		              		</div>
+		            	</div>
+		            	<div class="control-group">
+		              		<label class="control-label">Website Agent :</label>
+		              		<div class="controls">
+		                		<input type="text" class="span11" name="agent_website" id="agent_website" />
+		              		</div>
+		            	</div>
+		            	<div class="control-group">
+		              		<label class="control-label">Alamat Agent :</label>
+		              		<div class="controls">
+		                		<textarea class="span11" id="agent_address" name="agent_address" ></textarea>
+		              		</div>
+		            	</div>
+		            	<div class="control-group">
+		              		<label class="control-label">Area Agent :</label>
+		              		<div class="controls">
+		                		<textarea class="span11" id="agent_area" name="agent_area" placeholder="Ciracas, Cibubur, Cipayung" ></textarea>
+		              		</div>
+		            	</div>
+		            	<div class="control-group">
+		              		<label class="control-label">Spesialis Agent :</label>
+		              		<div class="controls">
+			                	<label>
+			                  	<input type="checkbox" name="radios" />
+			                  	Lokasi Strategis</label>
+			                	<label>
+			                  	<input type="checkbox" name="radios" />
+			                  	Lokasi Favorit</label>
+			                	<label>
+			                  	<input type="checkbox" name="radios" />
+			                  	Nilai Investasi Tinggi</label>
+			                	<label>
+			                  	<input type="checkbox" name="radios" />
+			                  	Green Concept</label>
+			              	</div>
+		            	</div>
+		          	</span>
+	        	</div>
+			</div>
+		
+
+		<div class="row-fluid">
+		    <div class="form-actions">
+		    	<button type="submit" class="btn btn-success">Save</button>
+		    	<button type="submit" class="btn btn-danger">Cancel</button>
+		    </div>
+		</div>
+	</form>
+	</div>
+</div>
+{% endblock %}

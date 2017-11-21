@@ -4,10 +4,10 @@
 <div id="content-header">
 	<div id="breadcrumb"> 
 		<a href="index.html" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Beranda</a> 
-		<a href="#" class="tip-bottom">Developer</a> 
+		<a href="#" class="tip-bottom">Proyek Developer</a> 
 		<a href="#" class="current">List Data</a> 
 	</div>
-	<h1>Daftar Data Developer</h1>
+	<h1>Daftar Data Proyek Developer</h1>
 </div>
 
 <div class="container-fluid">
@@ -23,26 +23,26 @@
               <thead>
                 <tr>
                   <th>ID</th>
-                  <th>Nama</th>
-                  <th>Email</th>
-                  <th>Alamat</th>
-                  <th>No Tlp</th>
-                  <th>No Hp</th>
-                  <th>Terdaftar</th>
+                  <th>Nama Proyek</th>
+                  <th>Developer</th>
+                  <th>Tipe Proyek</th>
+                  <th>Lokasi</th>
+                  <th>Harga</th>
+                  <th>Total Unit</th>
                   <th></th>
                 </tr>
               </thead>
               <tbody>
               {% for list in data %}
                 <tr>
-                  <td>{{list.developer_id}}</td>
+                  <td>{{list.project_id}}</td>
+                  <td>{{list.project_name}}</td>
                   <td>{{list.developer_name}}</td>
-                  <td>{{list.developer_email}}</td>
-                  <td>{{list.developer_address}}</td>
-                  <td>{{list.developer_phone}}</td>
-                  <td>{{list.developer_mobilephone}}</td>
-                  <td>{{list.post_date}}</td>
-                  <td><a href="/developer/edit/{{list.developer_id}}"><span class="icon"><i class="icon-edit"></i></span></a> || <span class="icon"><i class="icon-trash"></i></span></td>
+                  <td>{{list.property_type_name}}</td>
+                  <td>{{list.area_name}}, {{list.city_name}}</td>
+                  <td>IDR {{list.project_start_price |number_format(2, '.', ',')}} - IDR {{list.project_end_price |number_format(2, '.', ',')}}</td>
+                  <td>{{list.project_total_unit}}</td>
+                  <td><a href="/proyek-developer/edit/{{list.project_id}}"><span class="icon"><i class="icon-edit"></i></span></a> || <span class="icon"><i class="icon-trash"></i></span></td>
                   <!--<td class="center">4</td>-->
                 </tr>
               {% endfor %}
