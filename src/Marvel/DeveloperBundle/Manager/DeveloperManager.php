@@ -82,7 +82,7 @@ class DeveloperManager{
     }   
   }
 
-  public function showDeveloperByID(Int $param){
+  public function showDeveloperByID($param){
 
     $sql = "SELECT * FROM developer WHERE developer_id =".$param;
 
@@ -223,7 +223,7 @@ class DeveloperManager{
     }   
   }
 
-  public function showProyekDeveloperByID(Int $param){
+  public function showProyekDeveloperByID($param){
 
     $sql = "SELECT proyek.*, city.city_id, province.province_id 
             FROM proyek_developer proyek LEFT JOIN mst_area area ON proyek.area_id = area.area_id 
