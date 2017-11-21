@@ -22,7 +22,7 @@ class DefaultController extends BaseController
 
         $this->init();
 
-        try {
+        //try {
 
             $act = new DeveloperManager($this->getDoctrine()->getManager());
             $res['data'] = $act->showAllDeveloper();
@@ -35,10 +35,16 @@ class DefaultController extends BaseController
 
             return $this->render('MarvelDeveloperBundle:Page:developer-list.html.twig',$res);
 
+<<<<<<< HEAD
         } catch (\Exception $e) {
             return $this->errorResponse('Post developer failed, Please try again later', HttpStatusHelper::HTTP_PRECONDITION_FAILED);
         }
 
+=======
+        //} catch (\Exception $e) {
+          //  return $this->errorResponse('Post developer failed, Please try again later', HttpStatusHelper::HTTP_PRECONDITION_FAILED);
+        //}
+>>>>>>> c140c3408fccd60a8bb713a12629549180a41b74
     }
 
     public function addAction(){
