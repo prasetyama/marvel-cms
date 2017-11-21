@@ -14,7 +14,7 @@ class DeveloperManager{
 
   }
 
-  public function insertDeveloper(array $param = array(), String $fileName = NULL){
+  public function insertDeveloper(array $param = array(), $fileName){
 
     $sql = "INSERT INTO developer 
               (developer_name, developer_address, developer_email, developer_phone, developer_mobilephone, developer_notes, developer_logo, status, post_date) 
@@ -32,7 +32,7 @@ class DeveloperManager{
       } 
   }
 
-  public function updateDeveloper(array $param = array(), String $fileName = NULL){
+  public function updateDeveloper(array $param = array(), $fileName){
 
     $up['developer_name'] = $param['developer_name'];
     $up['developer_address'] = $param['address'];
@@ -285,7 +285,7 @@ class DeveloperManager{
     } 
   }
 
-  public function showProyekGallery(Int $param, $table){
+  public function showProyekGallery($param, $table){
 
     $sql = "SELECT * FROM ".$table." WHERE status = 1 AND project_id =".$param;
 
