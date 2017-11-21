@@ -52,7 +52,7 @@ class DefaultController extends BaseController
         return $this->render('MarvelDeveloperBundle:Page:developer-add.html.twig');
     }
 
-    public function editDeveloperAction(Int $id){
+    public function editDeveloperAction($id){
         
         $this->init();
 
@@ -72,7 +72,7 @@ class DefaultController extends BaseController
 
         $this->init();
 
-    	//try {
+    	try {
             $post = $request->request->all();
             $file = $request->files->get('logo');
 
@@ -93,9 +93,9 @@ class DefaultController extends BaseController
 
             return  $this->successResponse(array('data' => $res));
 
-        //} catch (\Exception $e) {
-          //  return $this->errorResponse('Post developer failed, Please try again later', HttpStatusHelper::HTTP_PRECONDITION_FAILED);
-        //}
+        } catch (\Exception $e) {
+            return $this->errorResponse('Post developer failed, Please try again later', HttpStatusHelper::HTTP_PRECONDITION_FAILED);
+        }
 
     }
 
@@ -206,7 +206,7 @@ class DefaultController extends BaseController
 
     }
 
-    public function editProyekDeveloperAction(Int $id){
+    public function editProyekDeveloperAction($id){
         
         $this->init();
 
