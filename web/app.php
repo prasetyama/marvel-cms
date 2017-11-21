@@ -7,7 +7,7 @@ include_once __DIR__.'/../app/bootstrap.php.cache';
 
 //umask(0000);
 Debug::enable();
-$kernel = new AppKernel('prod', true);
+$kernel = new AppKernel('prod', false);
 $kernel->loadClassCache();
 //$kernel = new AppCache($kernel);
 
