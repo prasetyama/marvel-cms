@@ -5,11 +5,12 @@ use Marvel\CoreBundle\Util\SlugHelper;
 
 class SimpleUpload{
 
-	protected function resizeImage($imagePath, $fileNameOri, $fileNameTo, $width, $height, $filterType = 0, $blur = 0, $bestFit = true, $cropZoom = false){
+	protected function resizeImage($imagePath, $fileNameOri, $fileNameTo, $width, $height, $filterType = 0, $blur = 0.9, $bestFit = TRUE, $cropZoom = false){
     
 	    //The blur factor where > 1 is blurry, < 1 is sharp.
 	    $imagick = new \Imagick($imagePath.$fileNameOri);
 	 
+	    //$imagick->resizeImage($width, $height, $filterType, $blur, $bestFit);
 	    $imagick->resizeImage($width, $height, $filterType, $blur, $bestFit);
 	 
 	    $cropWidth = $imagick->getImageWidth();
