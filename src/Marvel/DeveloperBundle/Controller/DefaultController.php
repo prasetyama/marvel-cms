@@ -230,7 +230,7 @@ class DefaultController extends BaseController
             if(!empty($proyekGallery)){
                 foreach($proyekGallery as $key => $val){
                     $url = '/upload/delete?token='.$res['data']['project_id'].'&type=proyekGallery&data='.$val['ori_img'].'&id='.$res['data']['project_id'];
-                    $p1[$key] = '<img style="height:160px" src="http://localhost:2000/uploads/proyek/'.$res['data']['project_id'].'/gallery/'.$val['ori_img'].'" class="file-preview-image">';
+                    $p1[$key] = '<img style="height:160px" src="/uploads/proyek/'.$res['data']['project_id'].'/gallery/'.$val['ori_img'].'" class="file-preview-image">';
                     $p2[$key] = ['caption' => "", 'width' => '120px', 'url' => $url, 'key' => $val['ori_img']];
                 }
 
@@ -241,7 +241,7 @@ class DefaultController extends BaseController
             if(!empty($proyekDenah)){
                 foreach($proyekDenah as $key => $val){
                     $urlDenah = '/upload/delete?token='.$res['data']['project_id'].'&type=proyekDenah&data='.$val['ori_img'].'&id='.$res['data']['project_id'];
-                    $p1Denah[$key] = '<img style="height:160px" src="http://localhost:2000/uploads/proyek/'.$res['data']['project_id'].'/denah/'.$val['ori_img'].'" class="file-preview-image">';
+                    $p1Denah[$key] = '<img style="height:160px" src="/uploads/proyek/'.$res['data']['project_id'].'/denah/'.$val['ori_img'].'" class="file-preview-image">';
                     $p2Denah[$key] = ['caption' => "", 'width' => '120px', 'url' => $urlDenah, 'key' => $val['ori_img']];
                 }
 
