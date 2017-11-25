@@ -1,5 +1,3 @@
-# properti-marvel
+# marvel-cms
 
-CMS for eProperti (Listing, eCommerce, etc).
-
-It uses Symfony 2.8.* for Stack Tech.
+CMS based on Symfony
